@@ -152,7 +152,7 @@ static int hwc_prepare_primary(hwc_composer_device_1 *dev,
     hwc_context_t* ctx = (hwc_context_t*)(dev);
     const int dpy = HWC_DISPLAY_PRIMARY;
     int ret = -1;
-    if(UNLIKELY(!ctx->mBasePipeSetup)
+    if(UNLIKELY(!ctx->mBasePipeSetup))
         setupBasePipe(ctx);
     if (LIKELY(list && list->numHwLayers > 1) &&
             ctx->dpyAttr[dpy].isActive) {
